@@ -1,0 +1,55 @@
+@media (min-width:1024px) {
+    
+    .icon > div{
+       width: 15px;
+       height: 15px;
+    }
+    .icon img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width:930px) {
+    .menu{
+        display: block;
+    }
+    .hamburgur{
+        display: block;
+    }
+    .account,.wishlist,.bag{
+        display: none;
+    }
+    .nav{
+        display: none;
+    }
+    .new_sub {
+        grid-template-columns: 1fr;
+    }
+    
+    
+    
+}
+@media (max-width:460px) {
+    .new_sub > .sub_wrab {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        width: 100%;
+    }
+    .new_sub > .sub_wrab > ul{
+        font-size: 12px;
+        padding: 10px 10px;
+        line-height: 2rem;
+        text-align: center;
+        height: fit-content;
+    }
+    .sub_wrab{
+        width:100%;
+        min-width: 320px;
+    }
+    .sub_right_new{
+        width: 100%;
+        height: fit-content;
+        background: url("../img/FY25_Mens-Grooming_nav-Tom.webp") no-repeat right;
+        background-size: cover;
+    }
+}

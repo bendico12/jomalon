@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+body{
+    background: #FCF9EE;
+    overflow: hidden;
+}
+a{
+    text-decoration: none; color: inherit;
+}
+header{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+}
+.head_wrab{
+    width: 1200px;
+    height: 100%;
+    padding: 0px 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo,.nav_wrab,.icon{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav_wrab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    letter-spacing: .2em;
+}
+/* sub */
+.sub{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* nuw_sub */
+.new_sub{
+    background-color: #F7F4E9;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 4개의 ul을 정확히 4등분 */
+    max-width: 1200px;
+    width: 100%;
+}
+.new_sub > .sub_wrab{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.new_sub > .sub_wrab > ul{
+    font-size: 12px;
+    padding: 10px 10px;
+    line-height: 2rem;
+    text-align: center;
+}
+.sub_right_new{
+    width: 100%;
+    height: 350px;
+    background: url("../img/FY25_Mens-Grooming_nav-Tom.webp") no-repeat center;
+    background-size: cover;
+}
+.sub_right_new > ul:first-child{
+    color: #fff;
+    background: #00000046;
+}
+.sub_right_new > ul:first-child > li:hover{
+    color: #000000;
+    background: #fff;
+}
+.sub_right_new > ul:last-child{
+    color: #000000;
+    background: #9b9b9b46;
+}
+.sub_right_new > ul:last-child > li:hover{
+    color: #fff;
+    background: #000000c0;
+}
+
+/* icon */
+.icon{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* hamburgur */
+.hamburgur{
+    z-index: 100;
+    display: none;
+    width: 50px;
+    height: 35px;
+    cursor: pointer;
+    margin-top:-6px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+.hamburgur .bar, .hamburgur:after, .hamburgur:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #424;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+.hamburgur.is-active:before{
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburgur.is-active:after{
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburgur.is-active .bar{
+    opacity: 0;
+}
+/* hamburgur menu */
+.menu{
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    padding-top: 120px;
+    transition: 0.4s;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(199, 49, 49, 0.272);
+}
+
+.no-scroll {
+    overflow: hidden; 
+}
+
+.menu.is-active{
+    left: 0;
+   
+}
+.menu li{
+    width: 100vw;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5rem;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+}
+
+.menu li{
+    transition: all .5s ease-out;
+    box-shadow: #00000000 1px 2px 1px;
+}
+.menu li:hover{
+    scale: 1.1;
+    box-shadow: #6464642c 1px 2px 1px;
+}
+
