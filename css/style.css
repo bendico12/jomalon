@@ -1,5 +1,19 @@
 @charset "utf-8";
-
+:root {
+    --vh: 1vh;
+  }
+  
+  html, body {
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  .page-wrapper {
+    height: calc(var(--vh, 1vh) * 100);
+    box-sizing: border-box;
+  }
+  
 body{
     margin-top: 60px;
     height: fit-content;
@@ -43,6 +57,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
+    fill: #1c1c1c;
 }
 /* hamburgur */
 .hamburgur{
@@ -283,13 +298,16 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 760px;
+    min-height: 560px;
+    max-height:600px ;
     height: 100%;
 }
 .title img{
-    width: 100%;
+    display: flex;
+    width: 100vw;
     height: 100%;
     object-fit: cover;
+    vertical-align: top;
 }
 
 
