@@ -8,19 +8,26 @@ document.addEventListener('DOMContentLoaded', function () {
     header.classList.add('visible');
   
     // 2. 햄버거 메뉴 토글
-    if (menu_btn && menu) {
-      menu_btn.addEventListener('click', function () {
-        menu_btn.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
-        header.classList.add('visible');
-  
-        if (menu.classList.contains('is-active')) {
-          body.classList.add('no-scroll');
-        } else {
-          body.classList.remove('no-scroll');
-        }
-      });
-    }
+   if (menu_btn && menu) {
+    let scrollPosition = 0;
+
+    menu_btn.addEventListener('click', function () {
+      const isActive = menu_btn.classList.toggle('is-active');
+      menu.classList.toggle('is-active', isActive);
+
+      if (isActive) {
+        scrollPosition = window.scrollY;
+        body.classList.add('no-scroll');
+        body.style.top = `-${scrollPosition}px`;
+      } else {
+        body.classList.remove('no-scroll');
+        body.style.top = '';
+        window.scrollTo({ top: scrollPosition, behavior: 'instant' });
+      }
+    });
+  }
+
+
   
     // 3. 스크롤 감지
     let lastScrollY = window.scrollY;
@@ -96,7 +103,11 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.nav > li').on('click', function (e) {
       e.preventDefault();
       const target = $(this).data('target');
-  
+     
+      // hover 스타일
+      $('.nav > li').removeClass('hovered');
+      $(`.nav > li[data-target="${target}"]`).addClass('hovered');
+      
       // 만약 이미 열려있는 상태에서 같은 항목을 다시 클릭하면 닫기
       if (currentTarget === target && $('.pc_sub').is(':visible')) {
         $('.pc_sub').fadeOut(200);
@@ -156,7 +167,93 @@ document.addEventListener('DOMContentLoaded', function () {
       $sub.find('._sub').hide();
       $sub.find(`._sub[data-target="${target}"]`).fadeIn();
     });
+
+    // ✅ 여기가 핵심: `.sub`을 벗어나면 닫기
+    $('.pc_sub .sub').on('mouseleave', function () {
+        $('.pc_sub').fadeOut(200);
+        $('.pc_sub .sub').fadeOut(200);
+        $('.nav > li').removeClass('hovered');
+        currentTarget = null;
+      }, );
+
   });
   
   
-  
+   const infoIcon = document.getElementById('info-icon');
+    const tooltip = document.getElementById('info-tooltip');
+
+    // 툴팁 위치를 아이콘 왼쪽 고정 위치로 맞춤
+    function positionTooltip() {
+      const rect = infoIcon.getBoundingClientRect();
+      // 아이콘 왼쪽 기준으로 툴팁 위치 계산
+      // 약간 오른쪽 여백 8px 주고, 수직 중앙 맞춤
+      const left = rect.left - tooltip.offsetWidth - 8;
+      const top = rect.top + rect.height / 2 - tooltip.offsetHeight / 2;
+
+      // 화면 밖으로 나가는거 방지
+      tooltip.style.left = (left < 8 ? 8 : left) + 'px';
+      tooltip.style.top = (top < 8 ? 8 : top) + 'px';
+    }
+
+    // 마우스가 infoIcon 위에 있을 때만 툴팁 표시 + 위치 재조정
+    infoIcon.addEventListener('mouseenter', () => {
+      tooltip.style.display = 'block';
+      tooltip.style.opacity = '1';
+      positionTooltip();
+    });
+
+    infoIcon.addEventListener('mouseleave', () => {
+      tooltip.style.display = 'none';
+      tooltip.style.opacity = '0';
+    });
+
+    // 화면 리사이즈 시 툴팁 위치 재조정
+    window.addEventListener('resize', () => {
+      if (tooltip.style.display === 'block') {
+        positionTooltip();
+      }
+    });
+
+    function validateForm() {
+      const email = document.getElementById('email');
+      const error = document.getElementById('email-error');
+      const form = document.getElementById('form-container');
+      const thankYou = document.getElementById('thank-you-message');
+      const value = email.value.trim();
+      const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      error.textContent = '';
+      email.classList.remove('error');
+      email.setAttribute('aria-invalid', 'false');
+
+      if (!value) {
+        error.textContent = 'Please enter your email address.';
+        email.classList.add('error');
+        email.setAttribute('aria-invalid', 'true');
+        return;
+      }
+
+      if (!pattern.test(value)) {
+        error.textContent = 'Please enter a valid email address.';
+        email.classList.add('error');
+        email.setAttribute('aria-invalid', 'true');
+        return;
+      }
+
+      if (value.toLowerCase() === 'notfound@example.com') {
+        error.textContent = "This email address doesn't appear to exist.";
+        email.classList.add('error');
+        email.setAttribute('aria-invalid', 'true');
+        return;
+      }
+
+      form.classList.add('hidden');
+      thankYou.classList.remove('hidden');
+    }
+
+    document.getElementById('email').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        validateForm();
+      }
+    });
