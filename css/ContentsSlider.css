@@ -1,0 +1,253 @@
+.wrapper_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+}
+.wrapper_title h2{
+    font-size: 2rem;
+
+}
+.wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .left-box {
+      flex: 0 1 360px;
+      max-width: 588px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .heart-container {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.15));
+    transition: transform 0.2s ease;
+    z-index: 10;
+    outline: none;
+    }
+    .heart-container:hover,
+    .heart-container:focus {
+      transform: scale(1.2);
+      outline: none;
+    }
+    .heart-bg {
+      fill: #ddd;
+      transition: fill 0.3s ease;
+    }
+    .heart-water {
+      transform-origin: center bottom;
+      transform-box: fill-box;
+      transform: translateY(100%);
+      transition: transform 0.5s ease;
+    }
+    .heart-container.filled .heart-water {
+      transform: translateY(0%);
+      transition: transform 0.5s ease;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 100%;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+   
+    .thumbnail-slider {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 800px;
+    }
+    .thumbnail-slider .slick-slide {
+      opacity: 0.5;
+      transition: opacity 0.3s, transform 0.3s;
+      padding: 0 10px;
+    }
+    .thumbnail-slider .slick-current {
+      opacity: 1 !important;
+      transform: scale(1.05);
+    }
+    .thumbnail-slider img {
+      width: 100px;
+      border-radius: 0;
+      border: 1px solid #eee;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s ease;
+    }
+    .thumbnail-slider .slick-current img {
+      border-color: #000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .thumbnail-slider img:hover {
+      transform: scale(1.05);
+    }
+    .progress-dots-container {
+      margin-top: 30px;
+      position: relative;
+      width: 90%;
+      height: 20px;
+    }
+
+    .progress-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #ccc;
+      transform: translateY(-50%);
+    }
+
+    .progress-dot {
+      position: absolute;
+      top: 50%;
+      padding: 10px;
+      width: 50px;           /* 원하는 너비 */
+      height: 12px;           /* 원하는 높이 */
+      background-color: #000; /* 색상 */
+      border-radius: 3px;    /* 둥근 사각형으로 하고 싶으면 이거 유지 / 네모는 0 */
+      transform: translate(-50%, -50%);
+      transition: left 0.3s ease;
+      cursor: pointer;
+    }
+
+    .progress-bar-container {
+      display: none;
+      position: relative;
+      width: 90%;
+      height: 4px;
+      background: #ddd;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: #000;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .right-box {
+      flex: 1 1 360px;
+      max-width: 588px;
+      display: flex;
+      flex-direction: column;
+      justify-content:first baseline;
+      padding: 10px 20px;
+    }
+    .Itemtitle {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 3rem;
+      margin-bottom: 50px;
+      text-align: center;
+      color: #000;
+    }
+    .size {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: 400;
+      color: #000000;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    .add-to-bag {
+      background: #000;
+      color: white;
+      padding: 14px 0;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 0;
+      border: none;
+      width: 100%;
+      margin: 0 auto 35px;
+      box-shadow: none;
+      transition: background 0.3s ease;
+      text-align: center;
+      user-select: none;
+    }
+    .add-to-bag:hover,
+    .add-to-bag:focus {
+      background: #333;
+      outline: none;
+    }
+    .description {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #444;
+      text-align: justify;
+    }
+
+    /* 모바일 대응 */
+    @media (max-width: 900px) {
+      .top-section {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .left-box,
+      .right-box {
+        max-width: 100%;
+        flex: unset;
+        padding: 0 10px;
+      }
+      .Itemtitle{
+        margin-bottom: 30px;
+      }
+      .main-image {
+        max-width: 280px;
+      }
+      .thumbnail-slider img {
+        width: 70px;
+      }
+      .add-to-bag {
+        max-width: 100%;
+      }
+      .description {
+        max-width: 100%;
+        padding: 0 10px;
+      }
+    }
+     @media (max-width: 450px) {
+        .Itemtitle {
+        font-size: 24px;
+        line-height: 30px;
+        }
+        .top-section {
+            gap: 16px;
+        }
+    }
