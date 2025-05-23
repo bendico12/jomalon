@@ -1,0 +1,87 @@
+/* Box sizing 전역 설정 */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 기본 마진과 패딩 제거 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 리스트 기본 스타일 제거 (접근성 고려한 role 포함) */
+ul[role='list'], ol[role='list'], ul, ol {
+    list-style: none;
+}
+
+/* HTML5 요소의 기본 display 설정 */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* 이미지, 미디어 요소 기본 스타일 */
+img, picture, svg, video, canvas {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-style: italic;
+}
+
+/* 앵커 태그 기본 텍스트 장식 자동 스킵 */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* 폼 요소에 폰트 상속 */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 텍스트 줄 간격 */
+body {
+    line-height: 1;
+}
+
+/* 테이블 기본 스타일 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 쿼트 스타일 제거 */
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+/* 전체 문서 높이 및 스크롤 부드럽게 */
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* 포커스 내 스크롤 부드러움 */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Reduced motion 접근성 옵션 */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
