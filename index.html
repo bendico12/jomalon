@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/Lazzzer00/Best-CSS-Reset-2024/refs/heads/main/css_reset.css">
-    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/midea.css">
+    <link rel="stylesheet" href="css/ContentsSlider.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
     <title>index</title>
 </head>
 <body>
-<main class="page-wrapper">
     <header>
-        <div class="head_wrab">
+        <div class="head_wrap">
             <div class="logo"><a href="#">
                 <svg width="134" height="28" viewBox="0 0 134 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect width="134" height="28" fill="url(#pattern0_30_802)"/>
@@ -25,7 +26,7 @@
                     </defs>
                     </svg>
             </a></div>
-            <div class="nav_wrab">
+            <div class="nav_wrap">
                 <ul class="nav">
                     <li data-target="new"><a href="#">NEW</a></li>
                     <li data-target="men"><a href="#">MEN'S EDIT</a></li>
@@ -63,7 +64,7 @@
                 <div class="mobile_sub">
                     <div class="sub">
                         <div class="sub_nav">
-                            <div class="sub_wrab sub_left sub_left_new">
+                            <div class="sub_wrap sub_left sub_left_new">
                                 <ul class="new_nav">
                                     <li data-target="cypress" data-bg="img/FY25_Mens-Grooming_nav-Tom.webp"><a href="#">Cypress & Graoevine</a>
                                     </li>
@@ -107,7 +108,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sub_wrab sub_right">
+                            <div class="sub_wrap sub_right">
                                 <ul class="box1_sub">
                                     <li>Diffuser Refill</li>
                                     <li><a href="#"><img src="img/FY25_Diffuser-Refills_nav-new.avif" alt="Diffuser"></a></li>
@@ -127,7 +128,7 @@
                 <div class="mobile_sub">
                     <div class="sub">
                         <div class="sub_nav">
-                            <div class="sub_wrab sub_left sub_left_men">
+                            <div class="sub_wrap sub_left sub_left_men">
                                 <ul class="new_nav">
                                     <li data-target="Tom" data-bg="img/24B10_Nav_Gif.gif"><a href="#">Tom Hardy For Jo Malone London</a>
                                     </li>
@@ -181,7 +182,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sub_wrab sub_right">
+                            <div class="sub_wrap sub_right">
                                 <ul class="box1_sub">
                                     <li>A Gentleman's Guide To Fragrance</li>
                                     <li><a href="#"><img src="img/FY25_GF_Related_Stories_Mobile.webp" alt="Diffuser"></a></li>
@@ -202,7 +203,7 @@
                 <div class="mobile_sub">
                     <div class="sub">
                         <div class="sub_nav">
-                            <div class="sub_wrab sub_left sub_left_Col">
+                            <div class="sub_wrap sub_left sub_left_Col">
                                 <ul class="new_nav">
                                     <li data-target="Categories" data-bg="img/25B01_Nav_Cologne-Intense_HC.avif"><a href="#">Categories</a>
                                     </li>
@@ -258,7 +259,7 @@
                                     </li>
                                     <li><a href="#">Luscious & Fruity</a>
                                     </li>
-                                    <li><a href="#">Light & Floral</a>å
+                                    <li><a href="#">Light & Floral</a>
                                     </li>
                                     <li><a href="#">Rich & Floral</a>
                                     </li>
@@ -266,7 +267,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sub_wrab sub_right">
+                            <div class="sub_wrap sub_right">
                                 <ul class="box1_sub">
                                     <li>Sofia's Pick From The Orchard: English pear & Freesia</li>
                                     <li><a href="#"><img src="img/FY26_SRG_nav-EP_new.avif" alt="Diffuser"></a></li>
@@ -287,7 +288,7 @@
                 <div class="mobile_sub">
                     <div class="sub">
                         <div class="sub_nav">
-                            <div class="sub_wrab sub_left sub_left_Home">
+                            <div class="sub_wrap sub_left sub_left_Home">
                                 <ul class="new_nav">
                                     <li data-target="Candles_H" data-bg="img/DT_NAV_Home_Candles.avif"><a href="#">Candles</a>
                                     </li>
@@ -349,7 +350,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sub_wrab sub_right">
+                            <div class="sub_wrap sub_right">
                                 <ul class="box1_sub">
                                     <li>Explore The TownHouse Collection</li>
                                     <li><a href="#"><img src="img/Townhouse-Collection_Navigation.avif" alt="Diffuser"></a></li>
@@ -370,7 +371,7 @@
                 <div class="mobile_sub">
                     <div class="sub">
                         <div class="sub_nav">
-                            <div class="sub_wrab sub_left sub_left_Gifts">
+                            <div class="sub_wrap sub_left sub_left_Gifts">
                                 <ul class="new_nav">
                                     <li data-target="Gift_G" data-bg="img/DT_NAV_Colognes_Form.avif"><a href="#">Gift Edit</a>
                                     </li>
@@ -422,7 +423,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sub_wrab sub_right">
+                            <div class="sub_wrap sub_right">
                                 <ul class="box2_sub">
                                 </ul>
                                 <ul class="box1_sub">
@@ -438,7 +439,7 @@
                 <div class="mobile_sub">
                     <div class="sub">
                         <div class="sub_nav">
-                            <div class="sub_wrab sub_left sub_left_Bath">
+                            <div class="sub_wrap sub_left sub_left_Bath">
                                 <ul class="new_nav">
                                     <li data-target="Bath_B" data-bg="img/DT_NAV_Bath&Body_Bath&Shower.avif"><a href="#">Bath & Shower</a>
                                     </li>
@@ -484,7 +485,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sub_wrab sub_right">
+                            <div class="sub_wrap sub_right">
                                 <ul class="box1_sub">
                                     <li>New Hand Cream Collection</li>
                                     <li><a href="#"><img src="img/Hand-Cream-Repack_Nav_New_UK.avif" alt="Hand_crem_collection"></a></li>
@@ -505,7 +506,7 @@
                 <div class="mobile_sub">
                     <div class="sub">
                         <div class="sub_nav">
-                            <div class="sub_wrab sub_left sub_left_Servies">
+                            <div class="sub_wrap sub_left sub_left_Servies">
                                 <ul class="new_nav">
                                     <li data-target="Experiences_S" data-bg="img/24E11_Services_Refresh_Nav_Experiences.avif"><a href="#">Experiences</a>
                                     </li>
@@ -537,7 +538,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sub_wrab sub_right">
+                            <div class="sub_wrap sub_right">
                                 <ul class="box1_sub">
                                     <li>Scent Your Wedding</li>
                                     <li><a href="#"><img src="img/Wedding-Nav_New_Desktop_experiences.avif" alt="Scent_Your_Wedding"></a></li>
@@ -561,7 +562,7 @@
     <div class="pc_sub">
         <div class="sub" data-target="new">
             <div class="sub_nav">
-                <div class="sub_wrab sub_left sub_left_new">
+                <div class="sub_wrap sub_left sub_left_new">
                     <ul class="new_nav">
                         <li data-target="cypress" data-bg="img/FY25_Mens-Grooming_nav-Tom.webp"><a href="#">Cypress & Graoevine</a>
                         </li>
@@ -605,7 +606,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sub_wrab sub_right">
+                <div class="sub_wrap sub_right">
                     <ul class="box1_sub">
                         <li>Diffuser Refill</li>
                         <li><a href="#"><img src="img/FY25_Diffuser-Refills_nav-new.avif" alt="Diffuser"></a></li>
@@ -621,7 +622,7 @@
         </div>
         <div class="sub" data-target="men">
             <div class="sub_nav">
-                <div class="sub_wrab sub_left sub_left_men">
+                <div class="sub_wrap sub_left sub_left_men">
                     <ul class="new_nav">
                         <li data-target="Tom" data-bg="img/24B10_Nav_Gif.gif"><a href="#">Tom Hardy For Jo Malone London</a>
                         </li>
@@ -675,7 +676,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sub_wrab sub_right">
+                <div class="sub_wrap sub_right">
                     <ul class="box1_sub">
                         <li>A Gentleman's Guide To Fragrance</li>
                         <li><a href="#"><img src="img/FY25_GF_Related_Stories_Mobile.webp" alt="Diffuser"></a></li>
@@ -692,7 +693,7 @@
         </div>
         <div class="sub" data-target="col">
             <div class="sub_nav">
-                <div class="sub_wrab sub_left sub_left_Col">
+                <div class="sub_wrap sub_left sub_left_Col">
                     <ul class="new_nav">
                         <li data-target="Categories" data-bg="img/25B01_Nav_Cologne-Intense_HC.avif"><a href="#">Categories</a>
                         </li>
@@ -748,7 +749,7 @@
                         </li>
                         <li><a href="#">Luscious & Fruity</a>
                         </li>
-                        <li><a href="#">Light & Floral</a>å
+                        <li><a href="#">Light & Floral</a>
                         </li>
                         <li><a href="#">Rich & Floral</a>
                         </li>
@@ -756,7 +757,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sub_wrab sub_right">
+                <div class="sub_wrap sub_right">
                     <ul class="box1_sub">
                         <li>Sofia's Pick From The Orchard: English pear & Freesia</li>
                         <li><a href="#"><img src="img/FY26_SRG_nav-EP_new.avif" alt="Diffuser"></a></li>
@@ -773,7 +774,7 @@
         </div>
         <div class="sub" data-target="home">
             <div class="sub_nav">
-                <div class="sub_wrab sub_left sub_left_Home">
+                <div class="sub_wrap sub_left sub_left_Home">
                     <ul class="new_nav">
                         <li data-target="Candles_H" data-bg="img/DT_NAV_Home_Candles.avif"><a href="#">Candles</a>
                         </li>
@@ -835,7 +836,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sub_wrab sub_right">
+                <div class="sub_wrap sub_right">
                     <ul class="box1_sub">
                         <li>Explore The TownHouse Collection</li>
                         <li><a href="#"><img src="img/Townhouse-Collection_Navigation.avif" alt="Diffuser"></a></li>
@@ -852,7 +853,7 @@
         </div>
         <div class="sub" data-target="gifts">
             <div class="sub_nav">
-                <div class="sub_wrab sub_left sub_left_Gifts">
+                <div class="sub_wrap sub_left sub_left_Gifts">
                     <ul class="new_nav">
                         <li data-target="Gift_G" data-bg="img/DT_NAV_Colognes_Form.avif"><a href="#">Gift Edit</a>
                         </li>
@@ -904,7 +905,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sub_wrab sub_right">
+                <div class="sub_wrap sub_right">
                     <ul class="box2_sub">
                     </ul>
                     <ul class="box1_sub">
@@ -916,7 +917,7 @@
         </div>
         <div class="sub" data-target="bath">
             <div class="sub_nav">
-                <div class="sub_wrab sub_left sub_left_Bath">
+                <div class="sub_wrap sub_left sub_left_Bath">
                     <ul class="new_nav">
                         <li data-target="Bath_B" data-bg="img/DT_NAV_Bath&Body_Bath&Shower.avif"><a href="#">Bath & Shower</a>
                         </li>
@@ -962,7 +963,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sub_wrab sub_right">
+                <div class="sub_wrap sub_right">
                     <ul class="box1_sub">
                         <li>New Hand Cream Collection</li>
                         <li><a href="#"><img src="img/Hand-Cream-Repack_Nav_New_UK.avif" alt="Hand_crem_collection"></a></li>
@@ -979,7 +980,7 @@
         </div>
         <div class="sub" data-target="servies">
             <div class="sub_nav">
-                <div class="sub_wrab sub_left sub_left_Servies">
+                <div class="sub_wrap sub_left sub_left_Servies">
                     <ul class="new_nav">
                         <li data-target="Experiences_S" data-bg="img/24E11_Services_Refresh_Nav_Experiences.avif"><a href="#">Experiences</a>
                         </li>
@@ -1011,7 +1012,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sub_wrab sub_right">
+                <div class="sub_wrap sub_right">
                     <ul class="box1_sub">
                         <li>Scent Your Wedding</li>
                         <li><a href="#"><img src="img/Wedding-Nav_New_Desktop_experiences.avif" alt="Scent_Your_Wedding"></a></li>
@@ -1032,10 +1033,267 @@
     <div class="title">
         <div class="DT"><img src="img/25C06_HP_Hero_DT_2880_New-Still.avif" alt="title_gif"></div>
         <div class="MB"><img src="img/25C06_HP_Hero_MB_New-Still.avif" alt="title_gif"></div>
+        <div class="title_box_wrap">
+            <div class="title_text_box_wrap">
+                <div class="title_text_box">
+                    <ul>
+                        <li class="title_text">One Scent, Many Expressions</li>
+                        <li class="button"><a href="#">Shop Cypress & Grapevine</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-</main>
-<script src="java/script.js"></script>
-<script src="viewport-fix.js"></script>
+    <div class="margin_80px"></div>
+    <!-- contnejts -->
+    <div class="contents_wrap">
+        <div class="contents_box">
+            <div class="contents_main_grid contents_main_grid_s_2 contents_main_grid_m_4">
+                <div class="item_box item1">
+                    <div class="img"><a href="#"><img src="img/Desktop_Cologne.avif" alt="Desktop_Cologne"></a></div>
+                    <div class="text">Colognes</div>
+                </div>
+                <div class="item_box item2">
+                    <div class="img"><a href="#"><img src="img/Desktop_Candle.avif" alt="Desktop_Cologne"></a></div>
+                    <div class="text">Candlse</div>
+                </div>
+                <div class="item_box item3">
+                    <div class="img"><a href="#"><img src="img/Desktop_Bath-Shower.avif" alt="Desktop_Cologne"></a></div>
+                    <div class="text">Body & Hand Wash</div>
+                </div>
+                <div class="item_box item4">
+                    <div class="img"><a href="#"><img src="img/Desktop_Diffuser.avif" alt="Desktop_Cologne"></a></div>
+                    <div class="text">Diffuser & Refills</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper_title">
+            <h2>Fragrant Favourites</h2>
+        </div>
+        <div class="wrapper">
+            <div class="top-section">
+              <div class="left-box">
+                  <a href="#" id="mainLink"><img id="mainImage" class="main-image" src="img/Pro_img/Pomegranate Noir Scented Candle.avif" alt="Main Image" />
+                  </a>
+                  <div class="heart-container" title="좋아요" aria-label="좋아요 버튼" role="button" tabindex="0">
+                  <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+                    <defs>
+                      <clipPath id="heart-clip" clipPathUnits="userSpaceOnUse">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                                 2 5.42 4.42 3 7.5 3 
+                                 c1.74 0 3.41 0.81 4.5 2.09 
+                                 C13.09 3.81 14.76 3 16.5 3 
+                                 C19.58 3 22 5.42 22 8.5 
+                                 c0 3.78-3.4 6.86-8.55 11.54 
+                                 L12 21.35z"/>
+                      </clipPath>
+                    </defs>
+                    <path class="heart-bg" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                                              2 5.42 4.42 3 7.5 3 
+                                              c1.74 0 3.41 0.81 4.5 2.09 
+                                              C13.09 3.81 14.76 3 16.5 3 
+                                              C19.58 3 22 5.42 22 8.5 
+                                              c0 3.78-3.4 6.86-8.55 11.54 
+                                              L12 21.35z" fill="#ddd"/>
+                    <g clip-path="url(#heart-clip)">
+                      <rect class="heart-water" x="0" y="0" width="24" height="24" fill="#ea2027" />
+                    </g>
+                  </svg>
+                </div>
+                <div class="thumbnail-slider">
+                  <div><a href="#"><img src="img/Pro_img/Pomegranate Noir Scented Candle.avif" alt="thumb1" data-index="0"></a>
+                </div>
+                  <div><a href="#"><img src="img/Pro_img/Myrrh & Tonka Cologne Intense.avif" alt="thumb2" data-index="1"></a>
+                </div>
+                  <div><a href="#"><img src="img/Pro_img/Lilac Lavender & Lovage Townhouse Diffuser.avif" alt="thumb3" data-index="2"></a>
+                </div>
+                  <div><a href="#"><img src="img/Pro_img/Men’s Grooming Travel Kit.avif" alt="thumb4" data-index="3"></a>
+                </div>
+                  <div><a href="#"><img src="img/Pro_img/Peony & Blush Suede Cologne.avif" alt="thumb5" data-index="4"></a>
+                </div>
+                  <div><a href="#"><img src="img/Pro_img/Nectarine Blossom & Honey Body Crème.avif" alt="thumb6" data-index="5"></a>
+                </div>
+                  <div><a href="#"><img src="img/Pro_img/Lime Basil & Mandarin Diffuser.avif" alt="thumb7" data-index="6"></a>
+                </div>
+                  <div><a href="#"><img src="img/Pro_img/Silver Birch & Lavender Cologne.avif" alt="thumb8" data-index="7"></a>
+                </div>
+                </div>
+                <div class="progress-bar-container">
+                  <div class="progress-bar"></div>
+                </div>
+                <div class="progress-dots-container">
+                  <div class="progress-line"></div>
+                  <div class="progress-dot"></div>
+                </div>
+              </div>
+              <div class="right-box" id="contentBox">
+                <div class="content-item" style="display: block;">
+                  <div class="Itemtitle">Pomegranate Noir Scented Candle</div>
+                  <div class="size">200g</div>
+                  <div class="price">£56.00</div>
+                  <div class="add-to-bag">Add to Bag</div>
+                  <div class="description">Fill the room with juicy pomegranate and smoky guaiacwood carried on the warm evening air. Crafted in the British countryside in a signature glass design.</div>
+                </div>
+                <div class="content-item" style="display: none;">
+                  <div class="Itemtitle">Myrrh & Tonka Cologne Intense</div>
+                  <div class="size">100ml</div>
+                  <div class="price">£160.00</div>
+                  <div class="add-to-bag">Add to Bag</div>
+                  <div class="description">The golden sand dunes of the Namib: home of distinctive myrrh trees. The alluring scent of its resin travelling on the hot air; mingling with the warm almond and lush vanilla notes of the tonka bean. Noble and intoxicating</div>
+                </div>
+                <div class="content-item" style="display: none;">
+                  <div class="Itemtitle">Lilac Lavender & Lovage Townhouse Diffuser</div>
+                  <div class="size">350ml</div>
+                  <div class="price">£148.000</div>
+                  <div class="add-to-bag">Add to Bag</div>
+                  <div class="description">Lavender-fresh sheets on a Sunday morning. The bedroom window slightly lifted, letting in the aroma of the dewy aromatic flowerbeds below. Crafted in a textured bisque porcelain, hand-finished in the UK. Includes 10 reeds to release scent continuously for approx 4-5 months. For optimal diffusion use all 10 simultaneously.</div>
+                </div>
+                <div class="content-item" style="display: none;">
+                  <div class="Itemtitle">Men’s Grooming Travel Kit</div>
+                  <div class="size">Various</div>
+                  <div class="price">£45.00</div>
+                  <div class="add-to-bag">Add to Bag</div>
+                  <div class="description">A collection of travel-sized grooming essentials in a reusable pouch. Prep, treat, style, scent and cleanse with fragrances from the men’s edit.
+                    <br>Contains: Wood Sage & Sea Salt Body & Hand Wash 75ml
+                    <br>Lime Basil & Mandarin Shampoo 50ml
+                    <br>Black Cedarwood & Juniper Shaving Cream 30ml
+                    <br>Black Cedarwood & Juniper Aftershave Moisturiser 15ml
+                    <br>Cypress & Grapevine Cologne Intense 9ml.</div>
+                </div>
+                <div class="content-item" style="display: none;">
+                  <div class="Itemtitle">Peony & Blush Suede Cologne</div>
+                  <div class="size">100ml</div>
+                  <div class="price">£118.00</div>
+                  <div class="add-to-bag">Add to Bag</div>
+                  <div class="description">The essence of charm. Peonies in voluptuous bloom, exquisitely fragile. Flirtatious with the juicy bite of red apple and the opulence of jasmine, rose and gillyflower. Mingling with the sensuality of soft, blush suede. Luxurious and seductive.</div>
+                </div>
+                <div class="content-item" style="display: none;">
+                  <div class="Itemtitle">Nectarine Blossom & Honey Body Crème</div>
+                  <div class="size">175ml</div>
+                  <div class="price">£64.00</div>
+                  <div class="add-to-bag">Add to Bag</div>
+                  <div class="description">Elevate your daily routine with nourishing Nectarine Blossom & Honey Body Crème. With cocoa butter and sweet almond oil, the formula is smooth in texture, and provides skin with moisturisation. Leave skin scented with this succulent, fruity fragrance.</div>
+                </div>
+                <div class="content-item" style="display: none;">
+                  <div class="Itemtitle">Lime Basil & Mandarin Diffuser</div>
+                  <div class="size">165ml</div>
+                  <div class="price">£74.00</div>
+                  <div class="add-to-bag">Add to Bag</div>
+                  <div class="description">Fill the room with Jo Malone London's modern classic. Includes 10 rattan reeds to release scent continuously for approx 3-4 months. For optimum effect use all 10 simultaneously</div>
+                </div>
+                <div class="content-item" style="display: none;">
+                  <div class="Itemtitle">Silver Birch & Lavender Cologne</div>
+                  <div class="size">100ml</div>
+                  <div class="price">£118.00</div>
+                  <div class="add-to-bag">Add to Bag</div>
+                  <div class="description">Morning light across a rambling garden, framed by silver birch trees. The air fresh with a crisp coolness that cuts through the scent of English lavender. Refreshed with a squeeze of grapefruit, grounded by a woody, charismatic base of silver birch accord and a compelling note of roasted oak. Stimulating. Fresh. Dashing.</div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="contents_1cut">
+            <img src="img/Pro_img/FY25_HGH_bestsellers_HP-MD-4_DT.avif" alt="FY25_HGH_bestsellers_HP-MD-4_DT">
+            <div class="text">Loved For A Reason</div>
+            <div class="shop"><a href="#">Shop Home Bestsellers</a></div>
+        </div>
+        <div class="contents_2cut">
+            <div class="box">
+            <img src="img/Pro_img/25C06_HP_Mod_2_3_DT_4_Ambassador.webp" alt="FY25_HGH_bestsellers_HP-MD-4_DT">
+            <div class="text">Tom Hardy For Cypress & Grapevine Cologne Intense</div>
+            <div class="shop"><a href="#">Shop the Cologne</a></div>
+            </div>
+            <div class="box">
+            <img src="img/Pro_img/Pomegranate_Noir_Mod2-3_DT.avif" alt="FY25_HGH_bestsellers_HP-MD-4_DT">
+            <div class="text">Pomegranate Noir</div>
+            <div class="shop"><a href="#">Shop the Scent</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="end_3cut_title">
+        <h2>Discover Our Services</h2>
+    </div>
+    <div class="contents_3cut_wrap">
+        <div class="box">
+            <img src="img/Pro_img/engraving.avif" alt="FY25_HGH_bestsellers_HP-MD-4_DT">
+            <div class="text">Etched With Love</div>
+            <div class="shop"><a href="#">Discover Engraving</a></div>
+        </div>
+        <div class="box">
+            <img src="img/Pro_img/Welcome_Sign_Up_HP_DT.avif" alt="FY25_HGH_bestsellers_HP-MD-4_DT">
+            <div class="text">Sign Up And Receive 10% Off* Your First Purchaser</div>
+            <div class="shop"><a href="#">Register Now</a></div>
+        </div>
+        <div class="box box_end">
+            <img src="img/Pro_img/appointments.avif" alt="FY25_HGH_bestsellers_HP-MD-4_DT">
+            <div class="text">Register Now</div>
+            <div class="shop"><a href="#">Discover Moret</a></div>
+        </div>
+    </div>
+    <div class="Complimentary"><h2>Complimentary Benefits</h2></div>
+    <div class="Complimentary_contents">
+        <div class="item">
+            <img src="img/perfume.svg" alt="perfume">
+            <p>
+                Complimentary samples 
+                <br>Try something new with your next order
+            </p>
+        </div>
+        <div class="item">
+            <img src="img/gift.svg" alt="gift">
+            <p>
+                Complimentary gift wrapping
+                <br>The perfect present, all wrapped up
+            </p>
+        </div>
+        <div class="item item_end">
+            <img src="img/car.svg" alt="car">
+            <p>
+                Complimentary standard delivery
+                <br>When you spend £60+
+            </p>
+        </div>
+    </div>
+    <div class="event_title">
+        <p>Sign up to email & receive 10% off your first purchase. 
+        </p>
+        <a href="#"> Terms and conditions.</a>
+    </div>
+    <div class="signUp_wrap">
+        <div class="container" id="form-container">
+            <h2>Sign-up</h2>
+
+            <div class="info-line">
+            <span class="info-icon" id="info-icon" title="Information">ℹ</span>
+            How do we use your data?
+        </div>
+        <div class="info-tooltip" id="info-tooltip" role="tooltip" aria-live="polite">
+        By checking this box, you accept that your e-mail address will be used to send you marketing newsletters and information about Jo Malone London products, events and offers.
+        You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.
+        For more information on Jo Malone London, a Trading company on Jo Malone Limited privacy practices, please see our Privacy Policy.
+        </div>
+
+        <input type="email" id="email" placeholder="Email Address" aria-describedby="email-error" aria-invalid="false" />
+        <div class="error-message" id="email-error" role="alert" aria-live="assertive"></div>
+
+        <div class="gender-options" id="gender-options" role="radiogroup" aria-label="Select Gender">
+        <label><input type="radio" name="gender" value="other" /> Other</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+        <label><input type="radio" name="gender" value="male" /> Male</label>
+        </div>
+
+        <button type="button" onclick="validateForm()">Sign-up</button>
+        <div class="privacy-notice">Review our data privacy notice</div>
+        </div>
+
+        <div class="thank-you hidden" id="thank-you-message" role="alert" aria-live="polite">
+            Thank you for subscribing!
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="java/script.js"></script>
+    <script src="java/ContentsSlider.js"></script>
+    <script src="java/viewport-fix.js"></script>
 </body>
 </html>
 
