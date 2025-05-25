@@ -795,4 +795,44 @@ header {
       display: none !important;
     }
 
-    
+    footer{
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 0 16px 0;
+        margin-top: 4px;
+        text-align:justify;
+    }
+    .ft1,.ft2,.ft3,.ft4{
+        padding: 10px;
+        width: 100%;
+    }
+    footer h2{
+        font-size: 12px;
+        font-weight: 560;
+        text-align: center;
+    }
+    footer ul li{
+        text-align: left;
+        line-height: 24px;
+        margin-bottom: 19px;
+        font-size: 12px;
+    }
+    footer ul{
+        padding: 24px 0 0;
+        transition: max-height 0.4s ease, padding 0.3s ease;
+        overflow: hidden;
+    }
+    .ft1_wrap{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        gap: 24px;
+    }
+    .ft2_wrap{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        gap: 24px;
+    }
