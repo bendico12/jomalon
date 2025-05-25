@@ -43,7 +43,6 @@
     user-select: none;
     filter: drop-shadow(0 0 2px rgba(0,0,0,0.15));
     transition: transform 0.2s ease;
-    z-index: 10;
     outline: none;
     }
     .heart-container:hover,
@@ -214,7 +213,12 @@
     }
 
     /* 모바일 대응 */
-    @media (max-width: 900px) {
+    @media (max-width: 500px) {
+         .heart-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+         }
       .top-section {
         flex-direction: column;
         gap: 24px;
@@ -222,14 +226,13 @@
       .left-box,
       .right-box {
         max-width: 100%;
-        flex: unset;
         padding: 0 10px;
       }
       .Itemtitle{
         margin-bottom: 30px;
       }
       .main-image {
-        max-width: 280px;
+        max-width: 100%;
       }
       .thumbnail-slider img {
         width: 70px;
@@ -243,6 +246,7 @@
       }
     }
      @media (max-width: 450px) {
+       
         .Itemtitle {
         font-size: 24px;
         line-height: 30px;
@@ -251,3 +255,4 @@
             gap: 16px;
         }
     }
+   
