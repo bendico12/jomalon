@@ -257,3 +257,26 @@ document.addEventListener('DOMContentLoaded', function () {
         validateForm();
       }
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth <= 480) {
+    const headers = document.querySelectorAll("footer h2");
+
+    headers.forEach(h2 => {
+      h2.addEventListener("click", function () {
+        const ul = this.nextElementSibling;
+        
+        // 닫기 전 다른 ul 모두 닫기 (선택사항)
+        document.querySelectorAll("footer ul").forEach(list => {
+          if (list !== ul) list.classList.remove("show");
+        });
+        document.querySelectorAll("footer h2").forEach(header => {
+          if (header !== this) header.classList.remove("active");
+        });
+
+        ul.classList.toggle("show");
+        this.classList.toggle("active");
+      });
+    });
+  }
+});
