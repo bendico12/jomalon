@@ -60,7 +60,22 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.logo,.nav_wrap,.icon{
+    
+ /* icon */
+.icon{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo,.nav_wrap{
     height: 100%;
     display: flex;
     align-items: center;
@@ -315,13 +330,7 @@ header {
 ._sub{
     display: none;
 }
-/* icon */
-.icon{
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 /* title contents */
 .title{
     position: relative;
@@ -595,18 +604,24 @@ header {
 /* sign-up event */
     .event_title{
         background: #FCF9EE;
+        padding: 0 0 20px;
         width: 100%;
-        padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
+    .event_title > a{
+        padding: 6px 0;
+        border-bottom: solid 1px;
+    }
     .event_title > p{
+        padding: 10px;
         display: flex;
-        height: 30px;
-        line-height: 1rem;
+        text-align:center;
+        height: 60px;
+        line-height: 1.5rem;
     }
     .signUp_wrap{
         width: 100%;
