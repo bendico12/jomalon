@@ -1,13 +1,6 @@
-@media (min-width:1024px) {
+@media (max-width:1024px) {
     
-    .icon > div{
-       width: 15px;
-       height: 15px;
-    }
-    .icon img{
-        width: 100%;
-        height: 100%;
-    }
+    
 }
 @media (max-width:1200px) {
     .contents_3cut_wrap{
@@ -55,7 +48,7 @@
     .hamburgur{
         display: block;
     }
-    .account,.wishlist,.bag{
+    .icon > .iconimg{
         display: none;
     }
     .nav{
